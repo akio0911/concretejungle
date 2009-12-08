@@ -1,4 +1,6 @@
-class UsersController < ApplicationController
+class UsersController < AdminController
+  before_filter :check_authentication
+
   # GET /users
   # GET /users.xml
   def index
