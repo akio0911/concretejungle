@@ -9,7 +9,7 @@
   </p>
   <p>
     <%= f.label :team_id %><br />
-    <%= f.text_field :team_id %>
+    <%= f.collection_select("team_id", Team.find(:all), :id, :name) %>
   </p>
   <p>
     <%= f.submit "Update" %>
