@@ -1,0 +1,7 @@
+<h1>コンクリートジャングル Vol.1</h1>
+<% @teams.each do |team| %>
+  <p><%=h team.name %></p>
+  <% team.users.each do |user| %>
+    <p><%=h user.name %></p>
+  <% end %>
+<% end %>
