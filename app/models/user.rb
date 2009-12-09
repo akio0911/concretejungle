@@ -2,6 +2,7 @@ require 'digest/sha2'
 
 class User < ActiveRecord::Base
   validates_uniqueness_of :name
+  belongs_to :team
 
   def self.authenticate(name, password)
     user = User.find(:first, :conditions => ['name = ?', name])
