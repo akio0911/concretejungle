@@ -1,3 +1,14 @@
+ユーザーの追加方法
+
+% ruby script/console 
+Loading development environment (Rails 2.2.2)
+>> User.find(:all)
+>> u = User.find(1)
+>> u.password = 'hoge'
+=> "hoge"
+>> u.save
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create 

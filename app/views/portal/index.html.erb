@@ -1,7 +1,23 @@
 <h1>コンクリートジャングル Vol.1</h1>
-<% @teams.each do |team| %>
-  <p><%=h team.name %></p>
-  <% team.users.each do |user| %>
-    <p><%=h user.name %></p>
-  <% end %>
+
+<% users = [] %>
+<%# users << 'hryuyr' %>
+<% users << 'shallow_willow' %>
+<% users << 'gaogaogao' %>
+<% users << 'akio0911' %>
+<%# users << 'apuro66' %>
+<% users << 'bluecrab37' %>
+<% users << 'rhrhrhrhrh' %>
+<% users << 'zero0039' %>
+<% users << 'yamarei' %>
+<% users << 'P_Maldini' %>
+
+<% users.each do |user| %>
+<div id="twitter_div">
+<h2 class="sidebar-title"><%=h user %></h2>
+<ul id="twitter_update_list"></ul>
+<a href="http://twitter.com/<%=h user %>" id="twitter-link" style="display:block;text-align:right;">follow me on Twitter</a>
+</div>
+<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/<%=h user %>.json?callback=twitterCallback2&amp;count=1"></script>
 <% end %>

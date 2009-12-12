@@ -2,4 +2,8 @@ log/development.log
 db/development.sqlite3
 db/schema.rb
 *.*~
+#*.erb#
+.#*.*
+#*.*
+*.*#
 
